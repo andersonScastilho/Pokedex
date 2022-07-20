@@ -13,8 +13,8 @@ let searchPokemon = 1
 const fetchPokemon = async (pokemon)=>{
     const APIResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
     if(APIResponse.status== 200){
-
         const data = await APIResponse.json();
+
         return data;
     }
 }
@@ -24,6 +24,13 @@ const renderPokemon = async(pokemon) =>{
     pokemonNumber.innerHTML =''
 
     const data = await fetchPokemon(pokemon)
+    if(data.id == 555){
+        pokemonName.style.fontSize = "70%"
+        pokemonNumber.style.fontSize = "65%"
+    }else{
+        pokemonName.style.fontSize = "clamp(8px, 5vw, 25px)"
+        pokemonNumber.style.fontSize = "clamp(8px, 5vw, 25px)"
+    }
     if(data){
         pokemonImage.style.display ='block'
         pokemonName.innerHTML = data.name
