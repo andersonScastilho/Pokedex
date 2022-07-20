@@ -24,7 +24,7 @@ const renderPokemon = async(pokemon) =>{
     pokemonNumber.innerHTML =''
 
     const data = await fetchPokemon(pokemon)
-    if(data.id == 555){
+    if(data.id == 555 || data.id == 641 || data.id == 642){
         pokemonName.style.fontSize = "70%"
         pokemonNumber.style.fontSize = "65%"
     }else{
