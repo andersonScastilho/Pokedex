@@ -12,6 +12,7 @@
 
 <p align="justify">
   Este projeto é uma pokedex desenvolvida com html, css e javascript com o intuito de aperfeiçoar meus conhecimentos.
+  <br/>
   obs: Nele utilizamos a api do pokeapi
 </p>
 
